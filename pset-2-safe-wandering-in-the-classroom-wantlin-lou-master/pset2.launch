@@ -1,0 +1,7 @@
+<launch>
+    <!-- 3dsensor.launch launches nodes for RGB and depth camera information -->
+    <include file="$(find turtlebot_bringup)/launch/3dsensor.launch" />
+    <!-- minimal.launch launches nodes for movement and bump/cliff sensing -->
+    <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+    <include file="velocity_smoother.launch.xml" />
+</launch>

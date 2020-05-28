@@ -1,0 +1,14 @@
+<launch>
+    <include file="$(find turtlebot_bringup)/launch/3dsensor.launch" />
+    <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+    <node pkg="nodelet" type="nodelet" name="wanderer_velocity_smoother" args="load yocs_velocity_smoother/VelocitySmootherNodelet /mobile_base_nodelet_manager">
+        <rosparam file="$(find turtlebot_bringup)/param/defaults/smoother.yaml" command="load"/>
+        <remap from="wanderer_velocity_smoother/smooth_cmd_vel" to="/cmd_vel_mux/input/navi"/>
+        <remap from="wanderer_velocity_smoother/odometry" to="/odom"/>
+        <remap from="wanderer_velocity_smoother/robot_cmd_vel" to="/mobile_base/commands/velocity"/>
+    </node>
+    <arg name="device" default="" />
+    <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py">
+      <param name="device" value="$(arg device)" />
+    </node>
+</launch>

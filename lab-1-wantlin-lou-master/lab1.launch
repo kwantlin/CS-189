@@ -1,0 +1,4 @@
+<launch>
+    <!-- minimal.launch launches nodes for movement and bump/cliff sensing -->
+    <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+</launch>
