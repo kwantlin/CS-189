@@ -1,2 +1,0 @@
-Katherine Lou
-Kathryn Wantlin
