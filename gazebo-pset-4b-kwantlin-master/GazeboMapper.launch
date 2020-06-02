@@ -21,6 +21,7 @@
         <arg name="x" value="$(arg x)"/>
         <arg name="y" value="$(arg y)"/>
         <arg name="yaw" value="$(arg yaw)"/>
+        <arg name="robot_name"  value="robot1" />
     </include>
    
     <!-- BEGIN ROBOT 2-->
@@ -31,6 +32,7 @@
         <arg name="x" value="$(arg x)"/>
         <arg name="y" value="$(arg y)"/>
         <arg name="yaw" value="$(arg yaw)"/>
+        <arg name="robot_name"  value="robot2" />
     </include>
 
     <!-- Launch velocity smoother -->
