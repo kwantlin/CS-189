@@ -13,20 +13,6 @@
 
     <!-- Launch Turtlebot -->
    
-    <!-- BEGIN ROBOT 1-->
-    <group ns="robot1">
-      <param name="tf_prefix" value="robot1_tf" />
-    </group>
-    <include file="$(find turtlebot_gazebo)/launch/put_robot_in_world.launch">
-        <arg name="x" value="$(arg x)"/>
-        <arg name="y" value="$(arg y)"/>
-        <arg name="yaw" value="$(arg yaw)"/>
-    </include>
-   
-    <!-- BEGIN ROBOT 2-->
-    <group ns="robot2">
-      <param name="tf_prefix" value="robot2_tf" />
-    </group>
     <include file="$(find turtlebot_gazebo)/launch/put_robot_in_world.launch">
         <arg name="x" value="$(arg x)"/>
         <arg name="y" value="$(arg y)"/>
