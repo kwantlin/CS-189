@@ -10,9 +10,6 @@
         <arg name="use_vo" value="false" />
     </include>
 
-   <param name="robot_description"
-       command="$(find xacro)/xacro.py $(find turtlebot_description)/robots/kobuki_hexagons_asus_xtion_pro.urdf.xacro" />
-
     <!-- Launch Turtlebot -->
     <include file="$(find turtlebot_gazebo)/launch/put_robot_in_world.launch">
         <arg name="x" value="$(arg x)"/>
